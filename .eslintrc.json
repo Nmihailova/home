@@ -4,33 +4,25 @@
         "es6": true,
         "node": true
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:prettier/recommended"
-    ],
-    "parser": "babel-eslint",
+    "extends": ["plugin:react-hooks/recommended", "plugin:prettier/recommended", "prettier"],
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
         },
         "ecmaVersion": 8,
-        "sourceType": "module"
+        "sourceType": "module",
+        "impliedStrict": true
     },
-    "plugins": [
-        "react",
-        "eslint-plugin-import"
-    ],
+    "plugins": ["react", "prettier", "eslint-plugin-import", "prettier", "@typescript-eslint"],
     "rules": {
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ],
+        "linebreak-style": ["error", "unix"],
+        "semi": ["error", "always"],
         "react/no-unescaped-entities": 0,
-        "react/prop-types": 0
+        "react/prop-types": 0,
+        "prettier/prettier": "error",
+        "react/display-name": "off",
+        "arrow-body-style": "off",
+        "prefer-arrow-callback": "off"
     }
 }

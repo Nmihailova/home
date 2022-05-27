@@ -1,6 +1,10 @@
-
+import {Menu} from './components/Menu';
 import './App.css';
 
-const App = () => <div>home</div>
+const App = () => (
+    <div>
+        <Menu />
+    </div>
+);
 
 export default App;
