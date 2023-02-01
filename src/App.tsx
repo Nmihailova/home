@@ -11,7 +11,7 @@ const App = () => {
     const currentRecipe = useSelector(selectCurrentRecipe);
 
     return (
-        <div>
+        <div className="root-element">
             <Menu />
             {currentRecipe && <Display currentRecipe={currentRecipe} />}
         </div>
