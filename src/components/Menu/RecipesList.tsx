@@ -18,7 +18,6 @@ export const RecipesList = ({category}: Props) => {
     const dispatch = useDispatch();
 
     const selectRecipe = ({title, text, e}: SelectRecipeProps) => {
-        console.log({title, text, e});
         e.stopPropagation();
         dispatch(setCurrentRecipe({title, text}));
     };
