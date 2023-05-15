@@ -1,7 +1,7 @@
 export type Recipe = {
     title: string;
-    text: string;
-    picture?: string;
+    previewText: string;
+    picture: string;
 };
 
 export type CategoryRecipe = {

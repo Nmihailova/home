@@ -1,0 +1,21 @@
+.preview {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 300px;
+    height: 400px;
+
+    padding: 10px;
+    margin: 10px;
+
+    background-color: palevioletred;
+    border-radius: 40px;
+}
+
+.picture {
+    width: 70%;
+    height: 40%;
+}

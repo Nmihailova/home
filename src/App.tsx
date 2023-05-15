@@ -1,19 +1,11 @@
-import {useSelector} from 'react-redux';
-
-import {selectCurrentRecipe} from './selectors';
-
-import {Menu} from './components/Menu';
-import {Display} from './components/Display';
+import {DesertsList} from './components/DesertsList';
 
 import './App.css';
 
 const App = () => {
-    const currentRecipe = useSelector(selectCurrentRecipe);
-
     return (
         <div className="root-element">
-            <Menu />
-            {currentRecipe && <Display currentRecipe={currentRecipe} />}
+            <DesertsList />
         </div>
     );
 };

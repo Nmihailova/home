@@ -1,79 +1,39 @@
-import type {RecipesList} from '../types';
+import type {Recipe} from '../types';
 
-export const RECIPES: RecipesList = {
-    breakfast: {
-        categoryName: 'Завтрак',
-        recipes: [
-            {
-                title: 'Яичница',
-                text: 'Разбить яйца, пожарить их',
-                picture: '',
-            },
-            {
-                title: 'Каша',
-                text: 'Сварить Кашу',
-                picture: '',
-            },
-        ],
+export const RECIPES: Recipe[] = [
+    {
+        title: 'Воздушный розовый торт',
+        previewText: 'Изумительный нежный вкус',
+        picture: 'pink_cake.jpeg',
     },
-    brunch: {
-        categoryName: 'Перекус',
-        recipes: [
-            {
-                title: 'Бутер',
-                text: 'Сделать бутер',
-                picture: '',
-            },
-            {
-                title: 'Банановый йогурт',
-                text: 'Сделать банановый йогурт',
-                picture: '',
-            },
-        ],
+    {
+        title: 'Пирожное "Наполеон"',
+        previewText: 'Совсем не ПП пирожное',
+        picture: 'napoleon.jpeg',
     },
-    lunch: {
-        categoryName: 'Обед',
-        recipes: [
-            {
-                title: 'Суп',
-                text: 'Сварить суп',
-                picture: '',
-            },
-            {
-                title: 'Курица',
-                text: 'Запечь курицу',
-                picture: '',
-            },
-        ],
+    {
+        title: 'Торт "Птичье молоко"',
+        previewText: 'От Акконда',
+        picture: 'moloko.png',
     },
-    linner: {
-        categoryName: 'Полдник',
-        recipes: [
-            {
-                title: 'Кефир',
-                text: 'Кефир',
-                picture: '',
-            },
-            {
-                title: 'Яблоко',
-                text: 'Яблоко',
-                picture: '',
-            },
-        ],
+    {
+        title: 'Торт на годовасие тугосери',
+        previewText: 'С мастикой',
+        picture: 'baby.jpg',
     },
-    dinner: {
-        categoryName: 'Ужин',
-        recipes: [
-            {
-                title: 'Креветки',
-                text: 'Сварить креветки, накормить зайца',
-                picture: '',
-            },
-            {
-                title: 'Овощи',
-                text: 'Дать погрызть зайцу овощи, морковку в частности',
-                picture: '',
-            },
-        ],
+    {
+        title: 'Торт с вишней',
+        previewText: 'С бельгийским шоколадом',
+        picture: 'cherry.jpg',
     },
-};
+    {
+        title: 'Торт с апельсином',
+        previewText: 'И ванильным кремом',
+        picture: 'orange.jpg',
+    },
+    {
+        title: 'Торт шоколадный',
+        previewText: 'С коньяком покрепче',
+        picture: 'alco_cake.jpg',
+    },
+];
