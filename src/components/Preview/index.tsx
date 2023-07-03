@@ -8,8 +8,13 @@ type Props = {
 
 export const PreviewCard = ({title, previewText, picture}: Props) => (
     <div className="preview">
-        <img className="picture" src={require(`../../pictures/${picture}`)} />
-        <h2>{title}</h2>
-        <div className="description">{previewText}</div>
+        <div className="picture-background">
+            <img className="picture" src={require(`../../pictures/${picture}`)} />
+        </div>
+
+        <div className="text-block">
+            <h2 className="desert-title">{title}</h2>
+            <p className="description">{previewText}</p>
+        </div>
     </div>
 );

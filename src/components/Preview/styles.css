@@ -2,20 +2,41 @@
     display: flex;
     flex-direction: column;
 
-    justify-content: center;
     align-items: center;
 
     width: 300px;
     height: 400px;
 
-    padding: 10px;
+    padding-top: 40px;
     margin: 10px;
 
     background-color: palevioletred;
     border-radius: 40px;
+    box-shadow: 0 5px 5px 0 gray;
 }
 
 .picture {
-    width: 70%;
-    height: 40%;
+    width: 80%;
+    height: 80%;
 }
+
+.picture-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    background-color: white;
+}
+
+.text-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    color: white;
+}
+
+
