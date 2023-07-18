@@ -1,0 +1,16 @@
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 50px 20px;
+
+    text-align: center;
+}
+
+.header-text {
+    margin: auto;
+
+    color: var(--wine-color);
+    font-style: italic;
+}

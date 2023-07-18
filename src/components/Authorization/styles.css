@@ -1,3 +1,9 @@
+.authorization {
+    position: absolute;
+    right: 20px;
+    left: auto;
+}
+
 .loginModal {
     display: flex;
     flex-flow: column nowrap;
@@ -40,14 +46,105 @@
 }
 
 .window {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     width: 50%;
     height: 400px;
+    padding: 10px;
 
-    background: rosybrown;
+    background: white;
 
     z-index: 103;
 }
 
-.fieldInvalid {
-    border: 2px solid red;
+form {
+    width: 60%;
+}
+
+.fieldWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.field {
+    height: 50px;
+    margin-bottom: 20px;
+
+    border: none;
+    border-bottom: 2px solid rgb(122, 12, 58);
+    font-size: 18px;
+}
+
+input:focus,
+input:active {
+    outline: none;
+}
+
+.invalid {
+    border-bottom: 2px solid red;
+}
+
+.fieldLabelText {
+    font-style: italic;
+    color: var(--cream-pink);
+    text-shadow: 2px;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    left: auto;
+
+    width: 30px;
+    height: 30px;
+
+    border: none;
+    background: none;
+
+    cursor: pointer;
+}
+
+.close::before,
+.close:after {
+    content: '';
+
+    width: 1px;
+    height: 20px;
+
+    background: rgb(122, 12, 58);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.close:before {
+    webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.close:after {
+    webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.submitButton {
+    display: block;
+    margin: 0 auto;
+
+    width: 200px;
+    height: 50px;
+}
+
+.loginModalButton {
+    width: 100px;
+    height: 25px;
 }

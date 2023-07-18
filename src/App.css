@@ -6,9 +6,12 @@ body {
 
 #root {
     height: 100%;
+
+    --wine-color: rgb(158, 56, 97);
+    --cream-pink: rgb(201, 100, 141);
 }
 
 .root-element {
     width: 100%;
-    height:100%;
+    height: 100%;
 }

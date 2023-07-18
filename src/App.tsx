@@ -1,13 +1,15 @@
-import {DesertsList} from './components/DesertsList';
-import {Authorization} from './components/Authorization';
+import {Content} from './components/Content';
+import {Menu} from './components/Menu';
+import {Header} from './components/Header';
 
 import './App.css';
 
 const App = () => {
     return (
         <div className="root-element">
-            <DesertsList />
-            <Authorization />
+            <Header />
+            <Menu />
+            <Content />
         </div>
     );
 };

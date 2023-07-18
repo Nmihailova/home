@@ -12,9 +12,7 @@ export const LoginModalWindow = ({onClose, isOpen}: Props) => {
         <div className={`loginModal ${isOpen ? 'loginModal--active' : 'loginModal--closed'}`}>
             <div className="shadow"></div>
             <div className="window">
-                <button onClick={onClose} className="loginModalClose">
-                    Close
-                </button>
+                <button onClick={onClose} className="close"></button>
                 <LoginForm />
             </div>
         </div>

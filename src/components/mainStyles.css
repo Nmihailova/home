@@ -1,0 +1,7 @@
+.button {
+    background-color: var(--wine-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

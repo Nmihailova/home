@@ -2,6 +2,8 @@ import {useState, useCallback} from 'react';
 
 import {LoginModalWindow} from './LoginModalWindow';
 
+import '../mainStyles.css';
+
 export const Authorization = () => {
     const [isModalOpen, setModalOpen] = useState(false);
 
@@ -14,9 +16,11 @@ export const Authorization = () => {
     }, [setModalOpen]);
 
     return (
-        <>
-            <button onClick={openModal}>Вход</button>
+        <div className="authorization">
+            <button className="button loginModalButton" onClick={openModal}>
+                Вход
+            </button>
             <LoginModalWindow isOpen={isModalOpen} onClose={closeModal} />
-        </>
+        </div>
     );
 };

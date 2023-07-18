@@ -1,6 +1,7 @@
 import {useState, useCallback} from 'react';
 
 import './styles.css';
+import '../mainStyles.css';
 
 type Values = {
     [key: string]: string;
@@ -49,10 +50,12 @@ export const LoginForm = () => {
 
     return (
         <form onSubmit={onSubmit}>
-            <div>
-                <label htmlFor="email">Email</label>
+            <div className="fieldWrapper">
+                <label className="fieldLabelText" htmlFor="email">
+                    Email
+                </label>
                 <input
-                    className={isEmailInvalid ? 'fieldInvalid' : ''}
+                    className={`field ${isEmailInvalid ? 'invalid' : ''}`}
                     type="email"
                     value={values.email}
                     required
@@ -61,10 +64,12 @@ export const LoginForm = () => {
                 />
             </div>
 
-            <div>
-                <label htmlFor="password">Пароль</label>
+            <div className="fieldWrapper">
+                <label className="fieldLabelText" htmlFor="password">
+                    Пароль
+                </label>
                 <input
-                    className={isPasswordInvalid ? 'fieldInvalid' : ''}
+                    className={`field ${isPasswordInvalid ? 'invalid' : ''}`}
                     type="password"
                     value={values.password}
                     required
@@ -73,7 +78,7 @@ export const LoginForm = () => {
                 />
             </div>
 
-            <input type="submit" value="Войти" />
+            <input className="button submitButton" type="submit" value="Войти" />
         </form>
     );
 };

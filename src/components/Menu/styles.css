@@ -1,0 +1,30 @@
+.menu {
+    display: flex;
+    gap: 40px;
+
+    width: fit-content;
+    margin: auto;
+
+    list-style: none;
+}
+
+.menu-item {
+    display: block;
+    padding: 15px 0;
+
+    font-size: 20px;
+    color: var(--cream-pink);
+    text-decoration: none;
+}
+
+.menu-item:focus {
+    border-bottom: 2px solid var(--wine-color);
+}
+
+.menu-item:hover {
+    color: rgb(203, 58, 116);
+}
+
+.menu-item:active {
+    color: rgb(125, 32, 70);
+}
