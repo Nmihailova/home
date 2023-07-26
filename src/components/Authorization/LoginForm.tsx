@@ -12,7 +12,46 @@ const initialValues: Values = {
     password: '',
 };
 
-export const LoginForm = () => {
+type Props = {
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    onSubmit: (e: any) => void;
+
+    isEmailInvalid: boolean;
+    isPasswordInvalid: boolean;
+    values: Values;
+};
+
+export const LoginFormView = ({onChange, onSubmit, isEmailInvalid, isPasswordInvalid, values}: Props) => (
+    <form onSubmit={onSubmit} data-testid="login-form">
+        <div className="fieldWrapper">
+            <input
+                className={`field ${isEmailInvalid ? 'invalid' : ''}`}
+                type="email"
+                value={values.email}
+                required
+                id="email"
+                onChange={onChange}
+                placeholder="Email"
+            />
+        </div>
+
+        <div className="fieldWrapper">
+            <input
+                className={`field ${isPasswordInvalid ? 'invalid' : ''}`}
+                type="password"
+                value={values.password}
+                required
+                id="password"
+                onChange={onChange}
+                placeholder="Пароль"
+            />
+        </div>
+
+        <input className="button submitButton" type="submit" value="Войти" />
+    </form>
+);
+
+const useEnhance = () => {
     const [values, setValue] = useState(initialValues);
     const [isEmailInvalid, setEmailError] = useState(false);
     const [isPasswordInvalid, setPasswordError] = useState(false);
@@ -48,37 +87,26 @@ export const LoginForm = () => {
         [setEmailError, setPasswordError, values],
     );
 
+    return {
+        onChange,
+        onSubmit,
+
+        isEmailInvalid,
+        isPasswordInvalid,
+        values,
+    };
+};
+
+export const LoginForm = () => {
+    const {onChange, onSubmit, isEmailInvalid, isPasswordInvalid, values} = useEnhance();
+
     return (
-        <form onSubmit={onSubmit}>
-            <div className="fieldWrapper">
-                <label className="fieldLabelText" htmlFor="email">
-                    Email
-                </label>
-                <input
-                    className={`field ${isEmailInvalid ? 'invalid' : ''}`}
-                    type="email"
-                    value={values.email}
-                    required
-                    id="email"
-                    onChange={onChange}
-                />
-            </div>
-
-            <div className="fieldWrapper">
-                <label className="fieldLabelText" htmlFor="password">
-                    Пароль
-                </label>
-                <input
-                    className={`field ${isPasswordInvalid ? 'invalid' : ''}`}
-                    type="password"
-                    value={values.password}
-                    required
-                    id="password"
-                    onChange={onChange}
-                />
-            </div>
-
-            <input className="button submitButton" type="submit" value="Войти" />
-        </form>
+        <LoginFormView
+            onChange={onChange}
+            onSubmit={onSubmit}
+            isEmailInvalid={isEmailInvalid}
+            isPasswordInvalid={isPasswordInvalid}
+            values={values}
+        />
     );
 };

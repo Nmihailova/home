@@ -4,7 +4,22 @@ import {LoginModalWindow} from './LoginModalWindow';
 
 import '../mainStyles.css';
 
-export const Authorization = () => {
+type Props = {
+    isModalOpen: boolean;
+    openModal: () => void;
+    closeModal: () => void;
+};
+
+export const AuthorizationView = ({isModalOpen, openModal, closeModal}: Props) => (
+    <div className="authorization">
+        <button className="button loginModalButton" onClick={openModal}>
+            Вход
+        </button>
+        <LoginModalWindow isOpen={isModalOpen} onClose={closeModal} />
+    </div>
+);
+
+export const useEnhance = () => {
     const [isModalOpen, setModalOpen] = useState(false);
 
     const openModal = () => {
@@ -15,12 +30,16 @@ export const Authorization = () => {
         setModalOpen(false);
     }, [setModalOpen]);
 
-    return (
-        <div className="authorization">
-            <button className="button loginModalButton" onClick={openModal}>
-                Вход
-            </button>
-            <LoginModalWindow isOpen={isModalOpen} onClose={closeModal} />
-        </div>
-    );
+    return {
+        isModalOpen,
+
+        openModal,
+        closeModal,
+    };
+};
+
+export const Authorization = () => {
+    const {isModalOpen, openModal, closeModal} = useEnhance();
+
+    return <AuthorizationView isModalOpen={isModalOpen} openModal={openModal} closeModal={closeModal} />;
 };

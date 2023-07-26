@@ -24,14 +24,6 @@
     z-index: 99;
 }
 
-.loginModal--opened {
-    visibility: visible;
-}
-
-.loginModal--closed {
-    visibility: hidden;
-}
-
 .shadow {
     position: absolute;
 
@@ -86,12 +78,6 @@ input:active {
 
 .invalid {
     border-bottom: 2px solid red;
-}
-
-.fieldLabelText {
-    font-style: italic;
-    color: var(--cream-pink);
-    text-shadow: 2px;
 }
 
 .close {
